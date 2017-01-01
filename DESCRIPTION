@@ -6,6 +6,7 @@ Description: Other software using CSV, such as the Linguistic Inquiry and Word C
 Depends:
     R (>= 3.3.1)
 License: GNU General Public License
+URL: https://github.com/jrosen48/csvsplittr
 Encoding: UTF-8
 LazyData: true
 Imports:

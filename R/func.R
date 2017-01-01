@@ -1,6 +1,6 @@
 # func.R
 
-#' Function to split a csv into a specified number of files
+#' Function to split a large CSV file into a specified number of files
 #'@param file_name character string indicating the path to a CSV file
 #'@param n_files_output the number of files to be output
 #'@details This function takes as inputs a file name for a CSV file and a specified number of files to split. It then splits the data frame output from reading the CSV file, rounding the number of rows in the data frame divided by the number of files to the ceiling, with the final split containing the rows remaining from the second to last split to the final row of the data frame output from reading the CSV File. The split files are saved to the working directory with a number appended to the original file name to indicate their position when split. The function does not return any values.
