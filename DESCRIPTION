@@ -1,0 +1,13 @@
+Package: csvsplittr
+Title: R package to split a CSV into a number of smaller CSV files
+Version: 0.0.1
+Authors@R: person("Joshua", "Rosenberg", email = "jmichaelrosenberg@gmail.co", role = c("aut", "cre"))
+Description: Other software using CSV, such as the Linguistic Inquiry and Word Count (LIWC) program for computational text analysis, or even Google Sheets and Microsoft Excel, perform poorly or not at all with very large CSV files. This package provides a function to read a CSV file, split it into a specified number of files, and write those smaller files to the working directory.
+Depends:
+    R (>= 3.3.1)
+License: GNU General Public License
+Encoding: UTF-8
+LazyData: true
+Imports:
+    readr
+RoxygenNote: 5.0.1
