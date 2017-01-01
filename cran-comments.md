@@ -1,3 +1,7 @@
+## Notes about a previous submission
+
+In a previous submission, I was asked to add examples, tests, or vignettes, and so I added an example and vignette. I was also asked to capitalize the title in the DESCRIPTION, which I did.
+
 ## Test environments
 * local OS X install, R 3.3.1
 * ubuntu 12.04 (on travis-ci), R 3.3.1

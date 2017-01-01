@@ -4,17 +4,24 @@
 \alias{split_csv}
 \title{Function to split a large CSV file into a specified number of files}
 \usage{
-split_csv(file_name, n_files_output)
+split_csv(file_name, n_files_output, delim = ",")
 }
 \arguments{
 \item{file_name}{character string indicating the path to a CSV file}
 
 \item{n_files_output}{the number of files to be output}
+
+\item{delim}{default is a comma (","); single character used to separate fields within a record passed to the delim argument for readr::read_delim()}
 }
 \description{
 Function to split a large CSV file into a specified number of files
 }
 \details{
-This function takes as inputs a file name for a CSV file and a specified number of files to split. It then splits the data frame output from reading the CSV file, rounding the number of rows in the data frame divided by the number of files to the ceiling, with the final split containing the rows remaining from the second to last split to the final row of the data frame output from reading the CSV File. The split files are saved to the working directory with a number appended to the original file name to indicate their position when split. The function does not return any values.
+This function takes as inputs a file name for a CSV file and a specified number of files to split. It then splits the data frame output from reading the CSV file, rounding the number of rows in the data frame divided by the number of files to the ceiling, with the final split containing the rows remaining from the second to last split to the final row of the data frame output from reading the CSV File. The split files are saved to the working directory with a number appended to the original file name to indicate their position when split. In the example below, four files would be written to the working directory, with the names "large_file-1.csv", "large_file-2.csv", "large_file-3.csv", and "large_file-4.csv".
+}
+\examples{
+\dontrun{
+split_csv("~/downloads/really_large_file.csv", 4)
+}
 }
 

@@ -1,0 +1,35 @@
+---
+title: "Introduction to csvsplittr"
+author: "Joshua Rosenberg"
+date: "1/1/2017"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+`csvsplittr` provides a simple function, `split_csv`, to split a large CSV (or other tab-delimited) file into a specified number of files.
+
+This is because ther software using CSVs, such as the Linguistic Inquiry and Word Count (LIWC) program for computational text analysis, or even Google Sheets and Microsoft Excel, perform poorly or not at all with very large CSV files. 
+
+This package provides a function to read a CSV file, split it into a specified number of files, and write those smaller files to the working directory.
+
+There is one function, `split_csv()` which takes as inputs a file name for a CSV file and a specified number of files to split, and an optional argument specifying the delimiter if not a comma (i.e., a tab if the file is tab-delimited).
+
+It splits the data frame output from reading the CSV file, rounding the number of rows in the data frame divided by the number of files to the ceiling, with the final split containing the rows remaining from the second to last split to the final row of the data frame output from reading the CSV File. 
+
+The split files are saved to the working directory with a number appended to the original file name to indicate their position when split. 
+
+## Example 
+
+Here is a short example using a not-too-large, but still hefty CSV file, with [data from Donors Choose](https://data.donorschoose.org/). It is about 800 MB. Let's say we wanted to split it into four files, each about 200 MB.
+
+```{r}
+library(csvsplittr)
+split_csv("~/downloads/donors_choose_data.csv", 4)
+```
+
+If we check what is in the working directory, we will see the original file and the split files, i.e. `donors_choose_data-1.csv`, `donors_choose_data-2.csv`, `donors_choose_data-3.csv`, and `donors_choose_data-4.csv`, with the same headers as the original file.
