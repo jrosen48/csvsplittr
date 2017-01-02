@@ -1,7 +1,7 @@
 ---
 title: "Introduction to csvsplittr"
 author: "Joshua Rosenberg"
-date: "1/1/2017"
+date: "1/2/2017"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -27,7 +27,7 @@ The split files are saved to the working directory with a number appended to the
 
 Here is a short example using a not-too-large, but still hefty CSV file, with [data from Donors Choose](https://data.donorschoose.org/). It is about 800 MB. Let's say we wanted to split it into four files, each about 200 MB.
 
-```{r}
+```{r, eval = F}
 library(csvsplittr)
 split_csv("~/downloads/donors_choose_data.csv", 4)
 ```
