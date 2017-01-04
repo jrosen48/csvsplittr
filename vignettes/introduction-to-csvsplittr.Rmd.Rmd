@@ -25,11 +25,17 @@ The split files are saved to the working directory with a number appended to the
 
 ## Example 
 
-Here is a short example using a not-too-large, but still hefty CSV file, with [data from Donors Choose](https://data.donorschoose.org/). It is about 800 MB. Let's say we wanted to split it into four files, each about 200 MB.
+Here is a short example (not run) using a CSV file with [data from Donors Choose](https://data.donorschoose.org/). Let's say it is about 1 GB and we wanted to split it into four files, each about 250 MB:
 
 ```{r, eval = F}
 library(csvsplittr)
-split_csv("~/downloads/donors_choose_data.csv", 4)
+split_csv("really_large_file.csv", 4)
+```
+
+Without loading the library, you can also use the function as following:
+
+```{r, eval = F}
+csvsplittr::split_csv("really_large_file.csv", 4)
 ```
 
 If we check what is in the working directory, we will see the original file and the split files, i.e. `donors_choose_data-1.csv`, `donors_choose_data-2.csv`, `donors_choose_data-3.csv`, and `donors_choose_data-4.csv`, with the same headers as the original file.
