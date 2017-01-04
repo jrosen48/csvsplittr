@@ -10,7 +10,8 @@ URL: https://github.com/jrosen48/csvsplittr
 Encoding: UTF-8
 LazyData: true
 Imports:
-    readr
+    readr,
+    devtools
 RoxygenNote: 5.0.1
 Suggests: knitr,
     rmarkdown
