@@ -3,6 +3,7 @@
 In a previous submission, I was asked to change the title to title case and correct an error in the example.
 
 ## Test environments
+
 * local OS X install, R 3.3.1
 * ubuntu 12.04 (on travis-ci), R 3.3.1
 * win-builder (devel and release)
